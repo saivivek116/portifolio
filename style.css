@@ -1,0 +1,143 @@
+body{
+  margin: 0px;
+  padding: 0px;
+
+}
+.header{
+  height: 90px;
+  display: flex;
+  background-color: darkcyan;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.logo{
+  float: left;
+}
+#logo{
+  height: 70px;
+  width: 70px;
+  margin: 10px;
+}
+.nav{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  margin-left: auto;
+  margin-right: 50px;
+  
+}
+a{
+  margin: 10px;
+  padding: 15px;
+  color: aliceblue;
+  text-decoration: none;
+}
+a:hover{
+  color: black;
+}
+.content{
+  width: 100%;
+}
+#image-banner{
+  width: 100%;
+  height:800px;
+  opacity: 0.8;
+
+}
+.title{
+  position: absolute;
+  top: 150px;
+  right:50px;
+}
+#title{
+  margin-bottom: 20px;
+  color:black;
+  font-size: 3em;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#description{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+  font-size: 1.5em;
+  color:slategrey;
+}
+.courses{
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+  margin: 25px;
+  padding: 5px;
+}
+.webheading{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:30px;
+  text-align: center;
+}
+
+#more {  
+  margin-left: 550px;
+  margin-bottom: 20px;
+  max-width: 150px;
+  display:block;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  padding: 5px;
+}
+
+.projects{
+      font-size: 18px;
+      font-family: 'Courier New', Courier, monospace;
+      max-width: 1150px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+.project-list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-left: 0;
+}
+
+.projects a{
+  color: #000;
+}
+
+
+.projects li {
+  padding: 15px;
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 20px 10px;
+  text-align: center;
+  box-shadow: 0 4px 7px 0px rgb(0 0 0 / 30%);
+  cursor: pointer;
+}
+
+.projects li:hover a,
+.projects li:hover{
+  color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .projects li{
+    min-width: 300px;
+  }
+}
