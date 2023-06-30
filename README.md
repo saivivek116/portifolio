@@ -1,2 +1,2 @@
-# js-projects
-JS Projects using ( HTML, CSS, Vanilla JS)
+# vivibruce.github.io
+Projects based on Javascript, HTML & CSS

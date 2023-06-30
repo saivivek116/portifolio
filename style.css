@@ -1,9 +1,59 @@
-body{
-  margin: 0px;
-  padding: 0px;
-
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.header{
+body {
+  margin: 0;
+  padding: 0px;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  background-color: darkcyan;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* .profile-image {
+  margin-top: 30px;
+} */
+
+.nav-container {
+  margin-left: auto;
+  display: flex;
+}
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+
+nav li a:hover {
+  color: black;
+  background-color: white;
+}
+
+section {
+  margin: 35px;
+  padding: 5px;
+}
+
+/* .header{
   height: 90px;
   display: flex;
   background-color: darkcyan;
@@ -26,7 +76,6 @@ body{
   font-size: 1.1em;
   margin-left: auto;
   margin-right: 50px;
-  
 }
 a{
   margin: 10px;
@@ -93,20 +142,32 @@ a:hover{
   color: white;
   background-color: blue;
   padding: 5px;
+} */
+
+.resume {
+  margin: 25px;
+  padding: 10px 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid;
+  border-radius: 4px;
+  background-color: white;
 }
 
-.projects{
-      font-size: 18px;
-      font-family: 'Courier New', Courier, monospace;
-      max-width: 1150px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+.resume a {
+  text-decoration: none;
+  background-color: white;
+  color: black;
 }
 
-.project-list{
+.projects {
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  /* max-width: 1150px; */
+  /* margin: 0 auto; */
+  align-items: center;
+}
+
+.project-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -116,10 +177,9 @@ a:hover{
   padding-left: 0;
 }
 
-.projects a{
+.projects a {
   color: #000;
 }
-
 
 .projects li {
   padding: 15px;
@@ -132,12 +192,52 @@ a:hover{
 }
 
 .projects li:hover a,
-.projects li:hover{
-  color: blue;
+.projects li:hover {
+  color: orange;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 10px;
+}
+
+.skills-list > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-list .icon {
+  font-size: 70px;
+  color: orange;
+}
+
+.socialmedia {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer {
+  text-align: center;
+}
+
+.section {
+  margin: 25px;
+  padding: 5px;
+}
+
+.socialmedia i {
+  color: #000;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 768px) {
-  .projects li{
+  .projects li {
     min-width: 300px;
   }
 }
