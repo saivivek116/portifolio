@@ -101,12 +101,28 @@ button {
 .project-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
   /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   align-content: center;
   padding-left: 0;
+}
+
+.card-img {
+  width: 320px;
+  height: 120px;
+  background: yellow;
+  position: relative;
+}
+
+.card-img::after {
+  content: "JS";
+  font-size: 29px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .custom-card {
@@ -115,12 +131,18 @@ button {
 }
 
 .source {
+  margin-top: 10px;
   display: flex;
+  font-size: 24px;
   justify-content: center;
 }
 
 .custom-card h2 {
   text-align: center;
+}
+
+.card {
+  box-shadow: -1px -1px 8px 5px rgba(0, 0, 0, 0.1);
 }
 
 .projects a {
@@ -165,6 +187,7 @@ button {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
 }
@@ -186,5 +209,13 @@ button {
 @media screen and (max-width: 768px) {
   .projects li {
     min-width: 300px;
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .project-list {
+    flex-wrap: wrap;
   }
 }
