@@ -133,6 +133,7 @@ button {
 .source {
   margin-top: 10px;
   display: flex;
+  align-items: center;
   font-size: 24px;
   justify-content: center;
 }
@@ -198,6 +199,19 @@ button {
 
 .lead {
   margin-bottom: 10px;
+}
+
+.projects .view-site {
+  /* padding: 5px; */
+  background-color: darkcyan;
+  border-radius: 4px;
+  margin-left: 16px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: white;
+}
+.view-site:hover {
+  text-decoration: none;
 }
 
 .socialmedia i {
