@@ -122,26 +122,29 @@ button {
     gap: 40px;
     /* flex-wrap: wrap; */
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     align-content: center;
     padding-left: 0;
 }
 
 .card-img {
     width: 320px;
-    height: 120px;
-    background: yellow;
+    height: 150px;
     position: relative;
 }
+.card-img img {
+    width: 100%;
+    height: 100%;
+}
 
-.card-img::after {
+/* .card-img::after {
     content: "JS";
     font-size: 29px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
+} */
 
 .custom-card {
     max-width: 500px;
@@ -340,4 +343,60 @@ nav .brand {
         height: auto;
         max-height: auto;
     } */
+}
+
+.active-nav-item {
+    border-bottom: 5px solid; /* or any style you prefer */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.photo-container {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.photo-container {
+    background-image: url("./photo.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-size: 250px;
+}
+
+.bio-container {
+    display: flex;
+}
+.text-container {
+    flex: 1;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-title::before,
+.section-title::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+}
+
+.section-title::before {
+    margin: 0 15px 10px 0;
+}
+
+.section-title::after {
+    margin: 0 0 10px 15px;
 }
