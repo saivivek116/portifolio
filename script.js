@@ -42,34 +42,83 @@ let activeLink = null;
 //     }
 // });
 
-const container = document.querySelector(".container");
-container.addEventListener("click", () => {
-    container.classList.toggle("cancel");
-});
+// navbar scroll active logic //
 
-window.addEventListener("scroll", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
+// const container = document.querySelector(".container");
+// container.addEventListener("click", () => {
+//     container.classList.toggle("cancel");
+// });
 
-    sections.forEach((section) => {
-        // Get the bounding rectangle of the section
-        const rect = section.getBoundingClientRect();
+// window.addEventListener("scroll", function () {
+//     const sections = document.querySelectorAll("section");
+//     const navLinks = document.querySelectorAll("nav ul li a");
 
-        // Check if the section is at the top of the viewport
-        if (rect.bottom > 0 && rect.top < window.innerHeight / 2) {
-            // Remove active class from all nav items
-            navLinks.forEach((link) => {
-                link.classList.remove("active-nav-item");
-            });
+//     sections.forEach((section) => {
+//         // Get the bounding rectangle of the section
+//         const rect = section.getBoundingClientRect();
 
-            // Find the nav link that corresponds to the section
-            const activeLink = document.querySelector(
-                `nav ul li a[href="#${section.id}"]`
+//         // Check if the section is at the top of the viewport
+//         if (rect.bottom > 0 && rect.top < window.innerHeight / 2) {
+//             // Remove active class from all nav items
+//             navLinks.forEach((link) => {
+//                 link.classList.remove("active-nav-item");
+//             });
+
+//             // Find the nav link that corresponds to the section
+//             const activeLink = document.querySelector(
+//                 `nav ul li a[href="#${section.id}"]`
+//             );
+//             if (activeLink) {
+//                 // Add active class to the corresponding nav link
+//                 activeLink.classList.add("active-nav-item");
+//             }
+//         }
+//     });
+// });
+
+// skills section code //
+
+document
+    .getElementById("skill-categories")
+    .addEventListener("click", function (e) {
+        if (e.target.tagName == "BUTTON") {
+            const buttonId = e.target.id;
+            const buttons = document.querySelectorAll(
+                "#skill-categories button"
             );
-            if (activeLink) {
-                // Add active class to the corresponding nav link
-                activeLink.classList.add("active-nav-item");
+
+            buttons.forEach((each) => {
+                each.classList.remove("active");
+            });
+            e.target.classList.add("active");
+            let containerId = "";
+            switch (buttonId) {
+                case "programming":
+                    containerId = "programmingLangIcons";
+                    break;
+                case "webtech":
+                    containerId = "webTechIcons";
+                    break;
+                case "database":
+                    containerId = "dbTechIcons";
+                    break;
+                case "cloud":
+                    containerId = "devOpsCloudIcons";
+                    break;
+                case "os":
+                    containerId = "operatingSysIcons";
+                    break;
             }
+
+            toggleDisplay(containerId);
         }
     });
-});
+
+function toggleDisplay(containerId) {
+    const iconContainers = document.querySelectorAll(".icon-container");
+    let container = document.getElementById(containerId);
+    iconContainers.forEach((each) => {
+        each.classList.remove("show");
+    });
+    container.classList.add("show");
+}

@@ -19,6 +19,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+ul {
+    padding: 0;
+}
+
 img,
 picture,
 video,
@@ -168,6 +172,7 @@ button {
 }
 
 .card {
+    border-radius: 10px;
     box-shadow: -1px -1px 8px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -178,7 +183,7 @@ button {
 .projects li {
     padding: 15px;
     border: 1px solid;
-    border-radius: 4px;
+    border-radius: 10px;
     margin: 20px 10px;
     text-align: center;
     box-shadow: 0 4px 7px 0px rgb(0 0 0 / 30%);
@@ -389,7 +394,7 @@ h2 {
     content: "";
     width: 50px;
     height: 2px;
-    background: #3498db;
+    background: darkcyan;
     display: inline-block;
 }
 
@@ -399,4 +404,164 @@ h2 {
 
 .section-title::after {
     margin: 0 0 10px 15px;
+}
+
+/* skills styles */
+
+.icon-container {
+    display: none;
+}
+.icon-container.show {
+    display: block;
+    flex: 1;
+}
+
+.skill-container li {
+    list-style: none;
+}
+
+.skill-container button {
+    border: 0;
+    background: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.skill-container {
+    display: flex;
+}
+
+.icon-container ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-gap: 10px;
+    align-items: center;
+    justify-items: center;
+    /* display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; */
+}
+
+/* #skill-categories {
+    flex: 1;
+} */
+
+#skill-categories li {
+    margin-bottom: 10px;
+}
+
+button.active {
+    background-color: darkcyan !important;
+    color: #fff;
+}
+
+button:hover {
+    background-color: rgba(0, 139, 139, 0.6);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* experience education styles */
+
+.exp-edu-container {
+    display: block;
+    position: relative;
+    text-align: justify;
+    max-width: 90%;
+    margin: 0;
+}
+
+.exp-edu-container::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: darkcyan;
+    margin-left: -1.5px;
+    left: 5%;
+}
+
+.exp-edu-item:nth-of-type(n) > div:first-of-type {
+    width: 80%;
+    z-index: 3;
+    background-color: inherit;
+    margin-left: auto;
+}
+
+.exp-edu-item:first-of-type {
+    margin-top: 0;
+}
+
+.exp-edu-item:nth-of-type(n) {
+    position: relative;
+    list-style: none;
+    display: block;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.exp-edu-card {
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: -1px -1px 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.exp-edu-container .date,
+.exp-edu-container .location {
+    display: block;
+}
+
+.exp-edu-item:nth-of-type(n) .line {
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    margin-right: -5px;
+    background-color: gray;
+    z-index: -2;
+    right: 80.5%;
+    left: 5%;
+}
+
+.exp-edu-item:nth-of-type(n) .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: -5px;
+    margin-top: -5px;
+    background-color: darkcyan;
+    z-index: 2;
+    box-shadow: 0 0 2px 5px #fff, 0 0 0 7px darkcyan;
+    left: 5%;
+    margin-left: -5px;
+}
+
+.exp-edu-item.active .dot {
+    animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+.exp-edu-item ul {
+    padding: 10px;
+}
+
+/* 0 0 2px 5px #1b1b1b, 0 0 0 7px #808080, 0 0 0 12px #1b1b1b, 0 0 0 13px #ffd285 */
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
 }
