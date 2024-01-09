@@ -58,7 +58,7 @@ let activeLink = null;
 //         const rect = section.getBoundingClientRect();
 
 //         // Check if the section is at the top of the viewport
-//         if (rect.bottom > 0 && rect.top < window.innerHeight / 2) {
+//         if (rect.bottom > 0 && rect.top < window.innerHeight) {
 //             // Remove active class from all nav items
 //             navLinks.forEach((link) => {
 //                 link.classList.remove("active-nav-item");
