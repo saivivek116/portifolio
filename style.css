@@ -85,10 +85,10 @@ button {
     padding: 0;
 }
 
-.btn.btn-primary {
+/* .btn.btn-primary {
     background-color: darkcyan;
     border: 0px darkcyan;
-}
+} */
 
 .resume {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -270,6 +270,7 @@ button {
     top: 0;
     width: 100%;
     z-index: 10;
+    height: 4rem;
 }
 
 .photo-container {
@@ -295,16 +296,17 @@ button {
 .text-container {
     flex: 1;
     margin-bottom: 20px;
+    flex-basis: 200px;
 }
 
 .bio-container .photo-container {
     flex-basis: 200px;
 }
 
-h2 {
+section > h2 {
     text-align: center;
     margin-bottom: 35px;
-    margin-top: 35px;
+    margin-top: 4rem;
 }
 
 .section-title::before,
@@ -490,10 +492,37 @@ button:focus {
     }
 }
 
+.resume-btn {
+    border: 2px solid darkcyan;
+    border-radius: 4px;
+    color: darkcyan;
+    padding: 10px 16px;
+    display: inline-block;
+    transition: background 200ms ease-in-out;
+    position: relative;
+}
+
+/* .resume-btn::after {
+    content: ">";
+    padding-left: 5px;
+    position: relative;
+} */
+
+a.resume-btn:focus,
+a.resume-btn:active,
+a.resume-btn:hover {
+    color: white;
+    text-decoration: none !important;
+    background-color: darkcyan;
+}
+
 /* Bio section */
 
 @media screen and (max-width: 560px) {
     .icon-container ul {
         grid-template-columns: repeat(3, 1fr);
+    }
+    section {
+        margin: 35px 10px;
     }
 }
