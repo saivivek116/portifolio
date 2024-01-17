@@ -376,9 +376,9 @@ button:hover {
     background-color: rgba(0, 139, 139, 0.6);
 }
 
-button:focus {
+/* button:focus {
     outline: none;
-}
+} */
 
 .skill-container li {
     position: relative;
@@ -540,9 +540,25 @@ a.resume-btn:hover {
     align-items: center;
     border: none;
     cursor: pointer;
-    /* background-color: rgba(0, 139, 139, 0.6); */
+    background-color: darkcyan;
+    /* animation: move-left 1s ease; */
+    color: white;
+    transition: right 1s ease;
 }
 
+.move-right {
+    right: -3rem;
+}
+/* 
+@keyframes move-left {
+    0% {
+        right: -2rem;
+    }
+    100% {
+        right: 2rem;
+    }
+} */
+
 .hidden {
-    display: none;
+    right: -3rem;
 }
