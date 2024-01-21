@@ -270,7 +270,8 @@ button {
     top: 0;
     width: 100%;
     z-index: 10;
-    height: 4rem;
+    min-height: 4rem;
+    height: auto;
 }
 
 .photo-container {
