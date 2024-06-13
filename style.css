@@ -49,6 +49,11 @@ h6 {
     overflow-wrap: break-word;
 }
 
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
 #root,
 #__next {
     isolation: isolate;
@@ -265,6 +270,27 @@ button {
     border-bottom: 5px solid; /* or any style you prefer */
 }
 
+.about-me{
+    margin-top: 8rem;
+}
+
+.about-me a{
+    display: inline-block;
+}
+
+.media-images a {
+    margin: 20px;
+}
+
+.media-images a:first-of-type{
+    margin-left: 0px;
+}
+
+.social-image{
+    width: 40px;
+    height: 40px;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -282,12 +308,13 @@ button {
     overflow: hidden;
 }
 
+
 .photo-container {
-    background-image: url("./photo.jpg");
+    background-image: url("images/saivivek.jpeg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-clip: padding-box;
-    background-size: 250px;
+    background-size: 190px;
 }
 
 .bio-container {
@@ -307,7 +334,7 @@ button {
 section > h2 {
     text-align: center;
     margin-bottom: 35px;
-    margin-top: 4rem;
+    font-weight: bold;
 }
 
 .section-title::before,
