@@ -67,4 +67,4 @@ str.charCodeAt(0); // Converts the character at index 0 to its ASCII value
 str.substring(1,2)
 str.toLowerCase()
 str.toUpperCase()
-
+str.match(/sai/)
